@@ -4,7 +4,8 @@ Welcome to the `Session Homeworks` directory! This space is organized into sessi
 
 ## Sessions
 
-- **Session 1 (March 4, 2024)**: Recursion, Pointers and Parameter Passing 
+**Session 1 (April 22, 2024)**: Data Structures, Files, Linked Lists 
+
 
 ## Contact
 

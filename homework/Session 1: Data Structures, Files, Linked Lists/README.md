@@ -1,14 +1,16 @@
-# Recursive Factorial Implementation
+# Singly Linked List with Previous Capability
 
 ## Problem Statement
 
-Implement your own recursive function in C to calculate the factorial of a given positive integer. The factorial of a number 'n' is the product of all positive integers less than or equal to 'n'. Do not adapt or use the code provided in the `recursive factorial.c` file.
+Modify the `singly-linked-list-#2.c` file to implement a playlist that has the capability to not just move to the next song but also to the previous one. In short, convert it to a doubly-linked list.
 
 ## Specifications/Requirements
 
-- Create a C program that includes a <b>recursive function</b> for calculating factorial.
-- You are required to use <b>pass-by-reference parameter passing</b> for this homework.
+- Update the singly-linked list implementation to include a feature for moving to the previous song in the playlist.
+- Ensure that the implementation remains efficient and does not compromise the functionality of the original singly linked list.
 
-## Solutions
+## Note
 
-Check your solutions or find reference answers in the solutions zip file available in the current directory: <b>[solutions.zip](./solutions.zip)</b>. There is no absolute one true answer to this homework, since there can be many variations of solutions to this problem. Have fun and good luck!
+There are no provided solutions for this homework, as similar assignments or exercises might be tasked to students in the future. 
+
+Have fun and good luck!
