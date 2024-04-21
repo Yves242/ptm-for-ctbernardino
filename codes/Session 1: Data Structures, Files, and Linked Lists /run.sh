@@ -4,6 +4,7 @@
 # made with the assistance of the famous AI tool ChatGPT,
 # just to make navigation of peer tutor materials easier for you.
 
+clear
 
 # Flag to track if the script has already run
 script_run=false
@@ -78,9 +79,9 @@ compile_and_run() {
                 
         # print notifications
         echo ""
-        echo $'—————————————————————————————————————————————————'
-        echo $'Dynamic compilation successful. Running program.'
-        echo $'—————————————————————————————————————————————————\n'
+        echo $'————————————————————————————————————'
+        echo $'Dynamic compilation done. Running...'
+        echo $'————————————————————————————————————\n'
 
         # execute the program
         ./a.out
@@ -89,7 +90,7 @@ compile_and_run() {
         # rm a.out
 
         # print it's finished
-        echo $'—————————————————————————————————————————————————'
+        echo $'\n————————————————————————————————————'
         echo $'\nThe program has finished running.\n'
 
     # if gcc returned error

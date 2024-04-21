@@ -1,6 +1,6 @@
 # Peer Tutoring - Computer Science
 
-Hello Kristan Louie Escarilla, welcome to your repository for free computer science tutoring sessions! This space is designed to provide resources, code samples, and additional support to help you excel in your computer science studies. 
+Hello Clarence Joshua Bernardino, welcome to your repository for free computer science tutoring sessions! This space is designed to provide resources, code samples, and additional support to help you excel in your computer science studies. 
 
 This repository will also function as the central hub for all our forthcoming peer sessions, should you choose to schedule additional sessions with me in the future.
 
