@@ -11,45 +11,44 @@ typedef struct Song {
     struct Song *next; // Pointer to the next song in the playlist
 } SONG;
 
-// Function prototypes for organization (new learning ko na it's better to do this before main())
+// Function prototypes
 SONG* createSong(const char *title, const char *artist, float duration, int year);
 void printPlaylist(SONG *head);
 void deletePlaylist(SONG *head);
-
+void appendSong(SONG **head, SONG *newSong);
 
 
 // main function
-int main() {
+void main() {
 
     // Create a playlist
     SONG *head = NULL;
 
+    // Create songs
+    SONG *song1 = createSong("Bohemian Rhapsody", "Queen", 5.92, 1975);
+    SONG *song2 = createSong("Stairway to Heaven", "Led Zeppelin", 8.03, 1971);
+    SONG *song3 = createSong("Hotel California", "Eagles", 6.30, 1977);
+    SONG *song4 = createSong("Imagine", "John Lennon", 3.03, 1971);
+
     // Add songs to the playlist
-    head = createSong("Bohemian Rhapsody", "Queen", 5.92, 1975);
-    head->next = createSong("Stairway to Heaven", "Led Zeppelin", 8.03, 1971);
-    head->next->next = createSong("Hotel California", "Eagles", 6.30, 1977);
-    head->next->next->next = createSong("Imagine", "John Lennon", 3.03, 1971);
+    appendSong(&head, song1);
+    appendSong(&head, song2);
+    appendSong(&head, song3);
+    appendSong(&head, song4);
 
     // Print the playlist
-    printf("Current Playlist:\n");
+    printf("Current Playlist:\n\n");
     printPlaylist(head);
 
     // Delete the playlist to free memory
     deletePlaylist(head);
-    
-    return 0;
 }
 
-
-/// @brief Function to create a new song.
-/// @param title Title of the song.
-/// @param artist Artist of the song.
-/// @param duration Duration of the song in minutes.
-/// @param year Release year of the song.
-/// @return Pointer to the newly created song.
+// Function to create a new song
 SONG* createSong(const char *title, const char *artist, float duration, int year) {
+    
     // Allocate memory for the new song
-    SONG *newSong = (SONG*)malloc(sizeof(SONG));
+    SONG *newSong = (SONG*) malloc(sizeof(SONG));
     if (newSong == NULL) {
         fprintf(stderr, "Memory allocation failed\n");
         exit(1);
@@ -65,10 +64,30 @@ SONG* createSong(const char *title, const char *artist, float duration, int year
     return newSong;
 }
 
+// Function to append a new song to the end of the playlist
+void appendSong(SONG **head, SONG *newSong) {
+    
+    // If playlist is empty, set new song as the head
+    if (*head == NULL) {
+        *head = newSong;
+        return;
+    }
 
-/// @brief Function to print the playlist.
-/// @param head Pointer to the head of the playlist.
+    // Find the last song in the playlist
+    SONG *lastSong = *head;
+    while (lastSong->next != NULL) {
+        lastSong = lastSong->next;
+    }
+
+    // Append the new song to the end
+    lastSong->next = newSong;
+}
+
+// Function to print the playlist
 void printPlaylist(SONG *head) {
+    
+    
+    // variable declarations
     SONG *current = head;
     int count = 1;
 
@@ -85,10 +104,10 @@ void printPlaylist(SONG *head) {
     }
 }
 
-
-/// @brief Function to delete the entire playlist.
-/// @param head Pointer to the head of the playlist.
+// Function to delete the entire playlist
 void deletePlaylist(SONG *head) {
+    
+    // variable declarations
     SONG *current = head;
     SONG *nextSong;
 
