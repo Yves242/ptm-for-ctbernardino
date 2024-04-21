@@ -7,6 +7,7 @@ Modify the `singly-linked-list-#2.c` file to implement a playlist that has the c
 ## Specifications/Requirements
 
 - Update the singly-linked list implementation to include a feature for moving to the previous song in the playlist.
+- Implement a menu system that allows users to add songs to the playlist with user-provided values.
 - Ensure that the implementation remains efficient and does not compromise the functionality of the original singly linked list.
 
 ## Note
