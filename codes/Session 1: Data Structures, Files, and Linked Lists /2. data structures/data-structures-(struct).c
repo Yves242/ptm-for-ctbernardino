@@ -33,7 +33,9 @@ void main() {
 
 
 
+    // // uncomment this when you want to print up to here
     // printNow = TRUE;
+
     // print appropriately
     if (printNow) {
 
@@ -72,7 +74,10 @@ void main() {
     playlist[2].duration = 3.03;
     playlist[2].year = 1971;
 
+
+    // // uncomment this if you want to print here
     // printNow = TRUE;
+
     // print appropriately
     if (printNow) {
 
@@ -113,7 +118,9 @@ void main() {
 
 
 
-    printNow = TRUE;
+    // // uncomment this when you want to print up to here
+    // printNow = TRUE;
+
     /* PART 2.3: You can directly modify details like this */
     strcpy(playlist[2].title, "");  // kapag string, need strcpy()
     playlist[2].year = 100000;      // kapag int or float, kahit direct value na
@@ -135,5 +142,5 @@ void main() {
         exit(0);
     }
     
-    printf("Oooh, you forgot to uncomment which \npart you want to print out. \nUncomment one line below:\n\n// printNow = TRUE;\n\n");
+    printf("Oooh, you forgot to uncomment which \npart you want to print out. \nUncomment one line below:\n\n[line 37]  // printNow = TRUE;\n[line 79]  // printNow = TRUE;\n[line 122] // printNow = TRUE;\n\n");
 }

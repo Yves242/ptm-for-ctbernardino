@@ -91,7 +91,8 @@ compile_and_run() {
         echo $'—————————————————————————————————————————————————\n'
 
         # Execute the compiled file
-        ./$(basename "$c_file").out
+        ./"$(basename "$c_file").out"
+
 
         # Print a message indicating program execution is finished
         echo $'\n\n—————————————————————————————————————————————————'
