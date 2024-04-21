@@ -98,6 +98,9 @@ compile_and_run() {
         echo $'\n\n—————————————————————————————————————————————————'
         echo $'\nThe program has finished running.\n'
 
+        # Delete the out file
+        rm "$(basename "$c_file").out"
+
         # Return to the original directory
         cd "$original_dir"
 
