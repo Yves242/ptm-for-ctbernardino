@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define SMTH 1
 
 // Structure for a song
 typedef struct Song {
