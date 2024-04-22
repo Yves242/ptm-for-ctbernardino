@@ -86,9 +86,9 @@ compile_and_run() {
 
     # Check if compilation was successful
     if [ $? -eq 0 ]; then
-        echo $'\n—————————————————————————————————————————————————'
+        echo $'\n————————————————————————————————————————'
         echo $'Compilation successful. Running program.'
-        echo $'—————————————————————————————————————————————————\n'
+        echo $'————————————————————————————————————————\n'
 
         # Execute the compiled file
         ./"$(basename "$c_file").out"

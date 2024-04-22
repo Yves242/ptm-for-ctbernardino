@@ -78,6 +78,25 @@ void writeToFile() {
     fclose(fp);
 }
 
+/// @brief Function that writes text to a file.
+void appendToFile() {
+    FILE *fp;
+    char text[] = "This is what we will place to the file.";
+
+    // Open the file in write mode
+    fp = fopen("new-file.txt", "a");
+    if (fp == NULL) {
+        printf("Error opening file for writing.\n");
+        return;
+    }
+
+    // Write text to the file
+    fprintf(fp, "%s\n", text);
+
+    // Close the file
+    fclose(fp);
+}
+
 /// @brief Function that removes a file. Di ata tinopic but yeah just for information.
 void removeFile() {
     char filename[] = "new-file.txt";
@@ -91,7 +110,22 @@ void removeFile() {
 }
 
 
-void main() {
+#include <dirent.h> 
+
+int main(void) {
+  DIR *d;
+  struct dirent *dir;
+  d = opendir(".");
+  if (d) {
+    while ((dir = readdir(d)) != NULL) {
+      printf("%s\n", dir->d_name);
+    }
+    closedir(d);
+  }
+  return(0);
+}
+
+void xmain() {
 
     // variable declarations
     char choice[10];
@@ -105,6 +139,7 @@ void main() {
         printf("2. Read from file using fgets\n");
         printf("3. Write to file\n");
         printf("4. Delete file\n");
+        printf("5. Append to file\n");
         printf("0. Exit\n");
         printf("\nEnter choice: ");
         scanf("%s", choice);
@@ -123,8 +158,11 @@ void main() {
             case '4':
                 removeFile();
                 break;
-            case '0':
             case '5':
+                appendToFile();
+                break;
+            case '0':
+            case '6':
                 return;
             default:
                 printf("Invalid choice. Try again.\n");
