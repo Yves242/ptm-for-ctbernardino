@@ -95,7 +95,7 @@ compile_and_run() {
 
 
         # Print a message indicating program execution is finished
-        echo $'\n\n—————————————————————————————————————————————————'
+        echo $'\n—————————————————————————————————————————'
         echo $'\nThe program has finished running.\n'
 
         # Delete the out file

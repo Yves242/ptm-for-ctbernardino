@@ -44,24 +44,29 @@ void main() {
     deletePlaylist(head);
 }
 
-// Function to create a new song
-SONG* createSong(const char *title, const char *artist, float duration, int year) {
+/// @brief Function to create a new song.
+/// @param title Title of the song.
+/// @param artist Artist of the song.
+/// @param duration Duration of the song in minutes.
+/// @param year Release year of the song.
+/// @return Pointer to the newly created song.
+SONG* createSong(const char *new_title, const char *new_artist, float new_duration, int new_year) {
     
     // Allocate memory for the new song
-    SONG *newSong = (SONG*) malloc(sizeof(SONG));
-    if (newSong == NULL) {
+    SONG *newSongInstance = (SONG*) malloc(sizeof(SONG));
+    if (newSongInstance == NULL) {
         fprintf(stderr, "Memory allocation failed\n");
         exit(1);
     }
 
     // Set the song details
-    strcpy(newSong->title, title);
-    strcpy(newSong->artist, artist);
-    newSong->duration = duration;
-    newSong->year = year;
-    newSong->next = NULL;
+    strcpy(newSongInstance->title, new_title);
+    strcpy(newSongInstance->artist, new_artist);
+    newSongInstance->duration = new_duration;
+    newSongInstance->year = new_year;
+    newSongInstance->next = NULL;
 
-    return newSong;
+    return newSongInstance;
 }
 
 // Function to append a new song to the end of the playlist

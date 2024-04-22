@@ -12,6 +12,11 @@ typedef struct Song {
     int year;          // Stores the release year of the song
 } SONG;
 
+
+
+
+
+
 void main() {
 
     // determines which part to print
@@ -118,8 +123,8 @@ void main() {
     }
 
 
-    // // uncomment this if you want to print here
-    // printNow = TRUE;
+    // uncomment this if you want to print here
+    printNow = TRUE;
 
     /* PART 2.3: You can directly modify details like this */
     strcpy(playlist[2].title, "");  // kapag string, need strcpy()
