@@ -5,6 +5,7 @@ Welcome to the `Session Codes` directory! This space is dedicated to organizing 
 ## Sessions
 
 **Session 1 (April 22, 2024)**: Data Structures, Files, Linked Lists 
+**Session 2 (April 29, 2024)**: Doubly-linked Lists 
 
 
 ## Running Instructions
